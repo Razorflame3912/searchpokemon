@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Pokemon Search </title>
+  </head>
+  <body>
+    <h1>Search for Pokemon and Their Stats!</h1><br>
+    <p>Type a pokemon name, ID, or type to get information about that Pokemon!</p>
+    <form>
+      <input type="text" name="input"><br>
+      <input type="submit" value="Search!">
+    </form>
+    {% for pokemon in results %}
+    {{pokemon["name"]}}
+    {% endfor %}
+  </body>
+  </html>
