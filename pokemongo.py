@@ -20,6 +20,7 @@ datastring = f.read()
 dic = json.loads(datastring)
 
 connection = pymongo.MongoClient('homer.stuy.edu')
+connection.drop_database('elsharawyM')
 db = connection['elsharawyM']
 collection = db['pokemon']
 
@@ -69,5 +70,3 @@ def find_name(name):
         print i
     return result
 
-
-connection.drop_database('elsharawyM')

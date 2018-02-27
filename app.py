@@ -10,8 +10,7 @@ def root():
         userinput = request.args['input']
     results = {}
     try:
-        int(userinput)
-        results = pokemongo.find_id(userinput)
+        results = pokemongo.find_id(int(userinput))
     except:
         namesearch = pokemongo.find_name(userinput)
         typesearch = pokemongo.find_type(userinput)

@@ -11,7 +11,20 @@
       <input type="submit" value="Search!">
     </form>
     {% for pokemon in results %}
-    {{pokemon["name"]}}
+    <p><b>{{pokemon["name"]}}</b></p>
+    <img src="{{pokemon["img"]}}">
+    <p>ID: {{pokemon["id"]}}<br>
+      Types:
+      {% for type in pokemon["type"]%}
+      {{type}},
+      {% endfor %}<br>
+      Weaknesses:
+      {% for weakness in pokemon["weaknesses"]%}
+      {{weakness}},
+      {% endfor %}<br>    
+      Height: {{pokemon["height"]}}<br>
+      Weight: {{pokemon["weight"]}}
+    </p>
     {% endfor %}
   </body>
   </html>
